@@ -1,6 +1,7 @@
 # Betclic
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.6.
+see https://stackoverflow.com/questions/26436657/rock-paper-scissors-in-java-using-modulus
 
 ## Development server
 

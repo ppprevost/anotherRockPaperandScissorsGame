@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.d-flex{
+  display: flex;
+}
+
+.flex-justify-around{
+  justify-content: space-around;
+}
+.flex-justify-center{
+  justify-content: center;
+}
+.flex-align-items-center{
+  align-items: center;
+}
+
