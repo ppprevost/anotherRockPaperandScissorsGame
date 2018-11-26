@@ -33,7 +33,7 @@ describe('GameComponent', () => {
         component.userChoice = component.choice.find(elem => elem.weapon === userChoiceLitteral).score;
         component.computerChoice = component.choice.find(elem => elem.weapon === computerChoiseLitteral).score;
         component.checkResult();
-        console.log(component);
+
         expect(component.playerScore).toBe(1);
         expect(component.computerScore).toBe(0);
         expect(component.count).toBe(1);
@@ -45,7 +45,7 @@ describe('GameComponent', () => {
         component.userChoice = component.choice.find(elem => elem.weapon === userChoiceLitteral).score;
         component.computerChoice = component.choice.find(elem => elem.weapon === computerChoiseLitteral).score;
         component.checkResult();
-        console.log(component);
+
         expect(component.playerScore).toBe(0);
         expect(component.computerScore).toBe(1);
         expect(component.count).toBe(1);

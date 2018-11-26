@@ -16,7 +16,6 @@ export class DialogScoresComponent implements OnInit {
 
     ngOnInit() {
         this.dataSource.sort = this.sort;
-        console.log(this);
     }
 
     constructor(
