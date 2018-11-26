@@ -13,10 +13,9 @@ import {DialogScoresComponent} from './utils/dialog-scores/dialog-scores.compone
 import {MatDialogModule} from '@angular/material';
 import {MatTableModule} from '@angular/material';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
-import {PlayerService} from './player-service.service';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
-import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
+import { AngularFirestore } from '@angular/fire/firestore';
 @NgModule({
     declarations: [
         AppComponent,
