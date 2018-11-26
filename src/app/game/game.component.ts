@@ -39,6 +39,7 @@ export class GameComponent implements OnInit {
     computerChoice = null;
     result = '';
     @Output() scoreEmitter = new EventEmitter<number>();
+
     ngOnInit() {
     }
 
@@ -50,6 +51,7 @@ export class GameComponent implements OnInit {
         this.computerScore = 0;
         this.playerScore = 0;
     }
+
     save() {
         this.scoreEmitter.emit(this.playerScore);
     }
@@ -72,6 +74,9 @@ export class GameComponent implements OnInit {
 
 
     pick(value: number) {
+        if (this.loading) {
+            return false;
+        }
         this.loading = true;
         this.userChoice = value;
         const randomNum: number = Math.floor(Math.random() * 3);
