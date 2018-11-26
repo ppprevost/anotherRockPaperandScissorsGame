@@ -5,12 +5,12 @@
 export const environment = {
     production: false,
     firebase: {
-        apiKey: "AIzaSyDvCCAn-Qi51711dOP6Qz63HMjqtO_BpXo",
-        authDomain: "betclic-542cd.firebaseapp.com",
-        databaseURL: "https://betclic-542cd.firebaseio.com",
-        projectId: "betclic-542cd",
-        storageBucket: "",
-        messagingSenderId: "645236295598"
+        apiKey: 'AIzaSyDvCCAn-Qi51711dOP6Qz63HMjqtO_BpXo',
+        authDomain: 'betclic-542cd.firebaseapp.com',
+        databaseURL: 'https://betclic-542cd.firebaseio.com',
+        projectId: 'betclic-542cd',
+        storageBucket: '',
+        messagingSenderId: '645236295598'
     }
 };
 

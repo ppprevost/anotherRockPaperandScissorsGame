@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {MatDialog} from '@angular/material';
-import {DialogScoresComponent} from "./utils/dialog-scores/dialog-scores.component";
-import {User} from "./model/user.model";
-import {AngularFirestore, AngularFirestoreCollection,AngularFirestoreDocument } from '@angular/fire/firestore';
+import {DialogScoresComponent} from './utils/dialog-scores/dialog-scores.component';
+import {User} from './model/user.model';
+import {AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 import * as firebase from 'firebase/app';
 
 
@@ -21,7 +21,7 @@ export class AppComponent implements OnInit {
 
     constructor(public dialog: MatDialog, private db: AngularFirestore) {
         this.usersCollection = db.collection<User>('players', ref => ref.orderBy('score'));
-        this.usersCollection.valueChanges().subscribe(elem => this.users = elem)
+        this.usersCollection.valueChanges().subscribe(elem => this.users = elem);
     }
 
     ngOnInit() {
@@ -30,17 +30,17 @@ export class AppComponent implements OnInit {
 
     sendingUsername(event) {
         this.username = event;
-        console.log(event)
+        console.log(event);
     }
 
     sendingScore(event) {
-        console.log('score', event)
+        console.log('score', event);
         const timestamp = firebase.firestore.FieldValue.serverTimestamp();
-        const userData:User = {
+        const userData: User = {
             username: this.username,
             score: event,
             date: timestamp
-        }
+        };
         this.usersCollection.add(userData);
     }
 
