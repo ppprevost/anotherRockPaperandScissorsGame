@@ -1,0 +1,50 @@
+<p style="text-align: center;">Number of parties : {{count}}</p>
+<div class="content">
+    <!-- You -->
+    <mat-card>
+        <mat-card-content>
+            <div class="content1">
+                <h2> You</h2>
+                <button mat-fab color="primary" class="score">
+                    {{playerScore}}
+                </button>
+            </div>
+            <h3> Choose your weapon: </h3>
+            <div class="content2">
+                <i *ngFor="let weapon of choice" [ngClass]="{selectedWeapon:userChoice === weapon.score}"
+                   class="fa {{weapon.icon}}" (click)="pick(weapon.score)">
+                </i>
+            </div>
+        </mat-card-content>
+    </mat-card>
+    <!-- Player 2 -->
+    <mat-card>
+        <div class="content1">
+            <h2> Computer</h2>
+            <button mat-fab color="accent" class="score">{{computerScore}}</button>
+
+        </div>
+        <br><br>
+
+        <div *ngIf="!loading && computerChoice !== null" class="d-flex flex-justify-center">
+            <div *ngFor="let weapon of choice">
+                <i *ngIf="weapon.score === computerChoice" class="fa {{weapon.icon}}"></i>
+            </div>
+        </div>
+    </mat-card>
+
+
+
+</div>
+<div *ngIf="!loading && count" class="d-flex flex-align-items-center" style="flex-direction: column">
+    <div *ngIf="result">
+        <h1>{{result}}</h1>
+    </div>
+    <p> Pick again to continue or </p>
+    <button (click)="reset()" mat-raised-button color="primary"> Reset score</button>
+    <button (click)="save()" mat-raised-button color="secondary"> Save score to internet</button>
+</div>
+
+<div class="d-flex flex-justify-center" *ngIf="loading">
+    <mat-spinner></mat-spinner>
+</div>

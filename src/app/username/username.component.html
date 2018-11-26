@@ -1,0 +1,13 @@
+<form class="username-form" #form (ngSubmit)="onSubmit()">
+    {{username}}
+    <mat-form-field class="example-full-width" appearance="legacy">
+        <input maxlength="10" matInput placeholder="Username" [formControl]="usernameFormControl">
+        <mat-error *ngIf="!usernameFormControl.hasError('required')">
+            Please enter your username
+        </mat-error>
+        <mat-error *ngIf="usernameFormControl.hasError('required')">
+            Username is <strong>required</strong>
+        </mat-error>
+    </mat-form-field>
+    <button mat-raised-button>Validate</button>
+</form>
