@@ -1,8 +1,9 @@
 # Betclic
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.6.
-see https://stackoverflow.com/questions/26436657/rock-paper-scissors-in-java-using-modulus
-Use 9.9.0 node version because of FireStore
+See https://stackoverflow.com/questions/26436657/rock-paper-scissors-in-java-using-modulus.
+Use 9.9.0 or 8.11.1 node version because of module dependencies and FireStore
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
