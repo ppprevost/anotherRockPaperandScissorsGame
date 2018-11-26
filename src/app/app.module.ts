@@ -40,7 +40,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
         MatProgressSpinnerModule,
         AngularFireModule.initializeApp(environment.firebase)
     ],
-    providers: [PlayerService, AngularFirestore],
+    providers: [ AngularFirestore],
     bootstrap: [AppComponent]
 })
 export class AppModule {
